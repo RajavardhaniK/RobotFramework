@@ -1,0 +1,13 @@
+*** Settings ***
+Library    SeleniumLibrary    
+
+*** Test Cases ***
+MyFirstTest
+    Log    Hello Raji!!!!    
+    
+FirstSeleniumTest
+    Open Browser        https://google.com         chrome
+    Input Text          name=q                     Robotframework    
+    Sleep
+    Close Browser
+        

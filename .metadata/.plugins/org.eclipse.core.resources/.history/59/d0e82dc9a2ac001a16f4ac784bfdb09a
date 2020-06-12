@@ -1,0 +1,12 @@
+*** Settings ***
+Library    SeleniumLibrary    
+
+*** Test Cases ***
+MyFirstTest
+    Log    Hello Raji!!!!    
+    
+FirstSeleniumTest
+    Create Webdriver   chrome    executable_path="C:\Users\rajak\RobotFramework\Robotframework\Drivers\chromedriver.exe"
+    Open Browser    https://google.com     chrome
+    Close Browser
+        
