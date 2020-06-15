@@ -3,8 +3,7 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 MyFirstTest
-    Log    Hello Raji!!!!    
-    
+    Log    Hello Raji!!!!        
 FirstSeleniumTest
     Log     TestStarted
     Open Browser  https://google.com  chrome
