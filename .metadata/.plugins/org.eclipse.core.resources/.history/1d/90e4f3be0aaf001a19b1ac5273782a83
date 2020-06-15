@@ -1,0 +1,18 @@
+*** Comments ***
+#Validate the Inputbox
+#Verify the title of the page
+#Visibility status,Enabled status,Provide the value,Clearing the value
+*** Settings ***
+Library    SeleniumLibrary   
+
+*** Variables ***
+${browser}     chrome
+${url}        https://www.google.com
+
+*** Test Cases ***
+ValidateTextBox
+    Open Browser     ${url}         ${browser}    
+    Maximize Browser Window
+    Title Should Be    Gmail   
+    ${"Signin_link"}     set variable    xpath:(//*[contains(text(),'Sign in')])[2]
+     

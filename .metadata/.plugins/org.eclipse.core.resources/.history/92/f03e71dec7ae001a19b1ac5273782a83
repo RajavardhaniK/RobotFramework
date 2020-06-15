@@ -1,0 +1,4 @@
+#Validate the Inputbox
+#Visibility status,Enabled status,Provide the value,Clearing the value
+#Verify the title of the page
+*** Test Cases ***

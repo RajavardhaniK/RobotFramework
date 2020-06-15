@@ -1,0 +1,9 @@
+*** Comments ***
+#Validate the Inputbox
+#Verify the title of the page
+#Visibility status,Enabled status,Provide the value,Clearing the value
+*** Settings ***
+Library    SeleniumLibrary   
+*** Test Cases ***
+ValidateTextBox
+    
