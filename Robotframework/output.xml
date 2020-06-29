@@ -1,113 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200615 18:59:23.246" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200629 18:04:06.932" rpa="false">
 <suite id="s1" name="Robotframework" source="C:\Users\rajak\RobotFramework\Robotframework">
 <suite id="s1-s1" name="TestCases" source="C:\Users\rajak\RobotFramework\Robotframework\TestCases">
-<suite id="s1-s1-s1" name="TestSuite2" source="C:\Users\rajak\RobotFramework\Robotframework\TestCases\TestSuite2.robot">
-<test id="s1-s1-s1-t1" name="ValidateTextBox">
+<suite id="s1-s1-s1" name="TestSuite5" source="C:\Users\rajak\RobotFramework\Robotframework\TestCases\TestSuite5.robot">
+<test id="s1-s1-s1-t1" name="Handling Waits">
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<assign>
+<var>${Current_Impwait}</var>
+</assign>
+<msg timestamp="20200629 18:04:07.265" level="INFO">${Current_Impwait} = 0 seconds</msg>
+<status status="PASS" starttime="20200629 18:04:07.264" endtime="20200629 18:04:07.265"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Before: ${Current_Impwait}</arg>
+</arguments>
+<status status="PASS" starttime="20200629 18:04:07.265" endtime="20200629 18:04:07.266"></status>
+</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20200615 18:59:23.503" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/intl/en-GB/gmail/about/#'.</msg>
-<status status="PASS" starttime="20200615 18:59:23.502" endtime="20200615 18:59:29.531"></status>
+<msg timestamp="20200629 18:04:07.267" level="INFO">Opening browser 'chrome' to base url 'http://demowebshop.tricentis.com/register'.</msg>
+<status status="PASS" starttime="20200629 18:04:07.267" endtime="20200629 18:04:44.013"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200615 18:59:29.532" endtime="20200615 18:59:29.667"></status>
+<status status="PASS" starttime="20200629 18:04:44.014" endtime="20200629 18:04:44.151"></status>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
-<arg>Gmail - Email from Google</arg>
+<arg>2 seconds</arg>
 </arguments>
-<msg timestamp="20200615 18:59:29.667" level="INFO">Page title is 'Gmail - Email from Google'.</msg>
-<status status="PASS" starttime="20200615 18:59:29.667" endtime="20200615 18:59:29.667"></status>
+<status status="PASS" starttime="20200629 18:04:44.152" endtime="20200629 18:04:44.155"></status>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>xpath:(//*[contains(text(),'Sign in')])[2]</arg>
+<arg>name:register-button</arg>
 </arguments>
-<assign>
-<var>${"Signin_link"}</var>
-</assign>
-<msg timestamp="20200615 18:59:29.667" level="INFO">${"Signin_link"} = xpath:(//*[contains(text(),'Sign in')])[2]</msg>
-<status status="PASS" starttime="20200615 18:59:29.667" endtime="20200615 18:59:29.667"></status>
+<status status="PASS" starttime="20200629 18:04:44.156" endtime="20200629 18:04:44.226"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
 <arguments>
-<arg>${"Signin_link"}</arg>
+<arg>name:register-button</arg>
 </arguments>
-<msg timestamp="20200615 18:59:29.667" level="INFO">Clicking element 'xpath:(//*[contains(text(),'Sign in')])[2]'.</msg>
-<status status="PASS" starttime="20200615 18:59:29.667" endtime="20200615 18:59:29.828"></status>
+<status status="PASS" starttime="20200629 18:04:44.226" endtime="20200629 18:04:44.290"></status>
 </kw>
-<kw name="Select Window" library="SeleniumLibrary">
-<doc>DEPRECATED in SeleniumLibrary 4.0. , use `Switch Window` instead.</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
 <arguments>
-<arg>NEW</arg>
+<arg>Gender</arg>
+<arg>F</arg>
 </arguments>
-<status status="PASS" starttime="20200615 18:59:29.828" endtime="20200615 18:59:29.849"></status>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<arguments>
-<arg>id:identifierId</arg>
-</arguments>
-<assign>
-<var>${"Email_field"}</var>
-</assign>
-<msg timestamp="20200615 18:59:29.850" level="INFO">${"Email_field"} = id:identifierId</msg>
-<status status="PASS" starttime="20200615 18:59:29.849" endtime="20200615 18:59:29.850"></status>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<arguments>
-<arg>${"Email_field"}</arg>
-</arguments>
-<msg timestamp="20200615 18:59:31.208" level="INFO">Element 'id:identifierId' is displayed.</msg>
-<status status="PASS" starttime="20200615 18:59:29.851" endtime="20200615 18:59:31.208"></status>
-</kw>
-<kw name="Element Should Be Enabled" library="SeleniumLibrary">
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<arguments>
-<arg>${"Email_field"}</arg>
-</arguments>
-<status status="PASS" starttime="20200615 18:59:31.209" endtime="20200615 18:59:31.247"></status>
+<msg timestamp="20200629 18:04:44.292" level="INFO">Selecting 'F' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20200629 18:04:44.291" endtime="20200629 18:04:44.408"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${"Email_field"}</arg>
-<arg>rajavardhani@gmail.com</arg>
+<arg>name:FirstName</arg>
+<arg>Raji</arg>
 </arguments>
-<msg timestamp="20200615 18:59:31.248" level="INFO">Typing text 'rajavardhani@gmail.com' into text field 'id:identifierId'.</msg>
-<status status="PASS" starttime="20200615 18:59:31.248" endtime="20200615 18:59:31.638"></status>
+<msg timestamp="20200629 18:04:44.410" level="INFO">Typing text 'Raji' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20200629 18:04:44.409" endtime="20200629 18:04:44.558"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>5</arg>
+<arg>name:LastName</arg>
+<arg>Kathir</arg>
 </arguments>
-<msg timestamp="20200615 18:59:36.643" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20200615 18:59:31.639" endtime="20200615 18:59:36.643"></status>
+<msg timestamp="20200629 18:04:44.560" level="INFO">Typing text 'Kathir' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20200629 18:04:44.559" endtime="20200629 18:04:44.684"></status>
 </kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${"Email_field"}</arg>
+<arg>name:Email</arg>
+<arg>Raji@gmail.com</arg>
 </arguments>
-<status status="PASS" starttime="20200615 18:59:36.643" endtime="20200615 18:59:36.674"></status>
+<msg timestamp="20200629 18:04:44.685" level="INFO">Typing text 'Raji@gmail.com' into text field 'name:Email'.</msg>
+<status status="PASS" starttime="20200629 18:04:44.685" endtime="20200629 18:04:44.836"></status>
 </kw>
-<status status="PASS" starttime="20200615 18:59:23.501" endtime="20200615 18:59:36.674" critical="yes"></status>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:Password</arg>
+<arg>Raji@123</arg>
+</arguments>
+<msg timestamp="20200629 18:04:44.837" level="INFO">Typing text 'Raji@123' into text field 'name:Password'.</msg>
+<status status="PASS" starttime="20200629 18:04:44.836" endtime="20200629 18:04:44.958"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:ConfirmPassword</arg>
+<arg>Raji@123</arg>
+</arguments>
+<msg timestamp="20200629 18:04:44.959" level="INFO">Typing text 'Raji@123' into text field 'name:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20200629 18:04:44.958" endtime="20200629 18:04:45.107"></status>
+</kw>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<assign>
+<var>${Current_Impwait}</var>
+</assign>
+<msg timestamp="20200629 18:04:45.108" level="INFO">${Current_Impwait} = 2 seconds</msg>
+<status status="PASS" starttime="20200629 18:04:45.107" endtime="20200629 18:04:45.108"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>After: ${Current_Impwait}</arg>
+</arguments>
+<status status="PASS" starttime="20200629 18:04:45.109" endtime="20200629 18:04:45.110"></status>
+</kw>
+<status status="PASS" starttime="20200629 18:04:07.263" endtime="20200629 18:04:45.110" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200615 18:59:23.305" endtime="20200615 18:59:36.676"></status>
+<status status="PASS" starttime="20200629 18:04:07.008" endtime="20200629 18:04:45.112"></status>
 </suite>
-<status status="PASS" starttime="20200615 18:59:23.301" endtime="20200615 18:59:36.680"></status>
+<status status="PASS" starttime="20200629 18:04:07.004" endtime="20200629 18:04:45.116"></status>
 </suite>
-<status status="PASS" starttime="20200615 18:59:23.280" endtime="20200615 18:59:36.684"></status>
+<status status="PASS" starttime="20200629 18:04:06.975" endtime="20200629 18:04:45.121"></status>
 </suite>
 <statistics>
 <total>
@@ -119,7 +140,7 @@
 <suite>
 <stat pass="1" fail="0" id="s1" name="Robotframework">Robotframework</stat>
 <stat pass="1" fail="0" id="s1-s1" name="TestCases">Robotframework.TestCases</stat>
-<stat pass="1" fail="0" id="s1-s1-s1" name="TestSuite2">Robotframework.TestCases.TestSuite2</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="TestSuite5">Robotframework.TestCases.TestSuite5</stat>
 </suite>
 </statistics>
 <errors>
