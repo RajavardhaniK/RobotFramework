@@ -1,0 +1,13 @@
+*** Settings ***
+Library    SeleniumLibrary    
+
+*** Test Cases ***
+To handle the wait
+    Open Browser    http://demowebshop.tricentis.com/register    chrome
+    Maximize Browser Window
+    Select Radio Button    Gender        
+    Input Text    name:FirstName            Raji
+    Input Text    name:LastName             Kathir
+    Input Text    name:Email                Raji@gmail.com
+    Input Text    name:Password             Raji@123    
+    Input Text    name:ConfirmPassword      Raji@123    

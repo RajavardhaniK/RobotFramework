@@ -1,0 +1,28 @@
+*** Comments ***
+#Set_Selenium_speed = will wait every statement if you mentioned one time
+#Set_Selenium_Timeout= will wait maximum time 
+                       #default time = 5 seconds,if you want to add
+                       more than 5 seconds you have to mention here
+#Implicitwait
+#Sleep= will wait the one place if you mentioned one time
+*** Settings ***
+Library    SeleniumLibrary    
+
+*** Test Cases ***
+To handle the wait
+   # ${Current_speed}=    Get Selenium Speed
+   #Log To Console    Before: ${Current_speed}    
+    Open Browser    http://demowebshop.tricentis.com/register    chrome
+    Maximize Browser Window
+    Set Selenium Timeout    10 seconds
+    Wait Until Element Is Visible    name:register-button    
+    Wait Until Element Is Enabled    name:register-button    
+    Set Selenium Speed     2 seconds
+    Select Radio Button    Gender    F    
+    Input Text    name:FirstName            Raji
+    Input Text    name:LastName             Kathir
+    Input Text    name:Email                Raji@gmail.com
+    Input Text    name:Password             Raji@123    
+    Input Text    name:ConfirmPassword      Raji@123    
+   #${Current_speed}=    Get Selenium Speed
+   #Log To Console    Before: ${Current_speed} 
