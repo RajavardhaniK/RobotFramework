@@ -1,0 +1,15 @@
+*** Comments ***
+Switch the tabbed window
+*** Settings ***
+Library    SeleniumLibrary   
+
+*** Test Cases ***
+Handle the Tabbed window
+     Open Browser     http://demo.automationtesting.in/Windows.html       chrome
+     Maximize Browser Window
+     Click Element    xpath://*[@id='Tabbed']//button
+     Sleep    2
+     Select Window    title=sakinalium.in    
+     Close All Browsers
+     
+

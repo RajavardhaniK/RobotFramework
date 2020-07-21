@@ -1,0 +1,8 @@
+*** Comments ***
+
+*** Settings ***
+Library    SeleniumLibrary   
+
+*** Test Cases ***
+Handle the Tabbed window
+     Open Browser    

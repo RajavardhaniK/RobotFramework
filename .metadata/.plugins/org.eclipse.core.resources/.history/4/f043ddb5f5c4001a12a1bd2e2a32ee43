@@ -1,0 +1,17 @@
+*** Comments ***
+Frames
+*** Settings ***
+Library    SeleniumLibrary    
+*** Test Cases ***
+Handling the frames
+    Open Browser    https://www.selenium.dev/selenium/docs/api/java/index    chrome
+    Select Frame    packageListFrame
+    Click Link    org.openqa.selenium
+    Unselect Frame
+    
+    Select Frame    packageFrame
+    Unselect Frame
+    
+    Select Frame    classFrame
+    Unselect Frame
+        

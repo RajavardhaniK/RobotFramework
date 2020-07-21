@@ -1,0 +1,7 @@
+*** Comments ***
+Frames
+*** Settings ***
+Library    SeleniumLibrary    
+*** Test Cases ***
+Handling the frames
+    
